@@ -8,6 +8,9 @@ import java.util.Map;
 public class DesignDescriptor {
 
     @JsonProperty
+    private String uuid;
+
+    @JsonProperty
     private String name;
 
     @JsonProperty
@@ -17,10 +20,21 @@ public class DesignDescriptor {
     private String template;
 
     @JsonProperty
+    private Map<String, String> resources;
+
+    @JsonProperty
     private Map<String, String> properties;
 
     @JsonProperty
     private List<ProcessorDescriptor> processors;
+
+    public String getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
+    }
 
     public String getName() {
         return name;
@@ -44,6 +58,14 @@ public class DesignDescriptor {
 
     public void setTemplate(String template) {
         this.template = template;
+    }
+
+    public Map<String, String> getResources() {
+        return resources;
+    }
+
+    public void setResources(Map<String, String> resources) {
+        this.resources = resources;
     }
 
     public Map<String, String> getProperties() {
